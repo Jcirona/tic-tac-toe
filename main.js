@@ -2,8 +2,10 @@ var playerOneTurn = true
 var playerOneWins = null
 var playerTwoWins = null
 var turnNum = 0
+var playerOneScore = 0
+var playerTwoScore = 0
 
-
+var allTiles = document.querySelectorAll('#tiles')
 var tileOne = document.querySelector('.tile-one')
 var tileTwo = document.querySelector('.tile-two')
 var tileThree = document.querySelector('.tile-three')
@@ -18,6 +20,9 @@ var resultBoard = document.querySelector('.result')
 var playerOneSelect = document.querySelector('.tile')
 var selectedSquare = document.querySelector('.squares')
 
+var playerOneNewScore = document.querySelector('.player-one')
+var playerTwoNewScore = document.querySelector('.player-two')
+
 
 
 
@@ -27,6 +32,7 @@ function playerOneClick(event) {
     if (boxClicked.tagName === 'DIV') {
         if (boxClicked.textContent != 'O' && playerOneTurn === true) {
             boxClicked.textContent = 'X'
+            boxClicked.style.color = 'yellow'
             turnNum++
             
             //One dense nest for player X
@@ -69,7 +75,8 @@ function playerOneClick(event) {
 
          // Player O's seriously large nest                               
         }else if(boxClicked.textContent != 'X' && playerOneTurn === false) {
-            boxClicked.textContent = 'O'   
+            boxClicked.textContent = 'O'
+            boxClicked.style.color = 'orange'   
             turnNum ++
             
             if (tileOne.textContent === 'O' && tileTwo.textContent === 'O' && tileThree.textContent === 'O'){
@@ -111,10 +118,15 @@ function playerOneClick(event) {
     }
     if (playerOneWins === true) {
         resultBoard.textContent = 'Player One Wins!'
+        playerOneScore ++
+        playerOneNewScore.textContent = playerOneScore
     } else if (playerTwoWins === true) {
         resultBoard.textContent = 'Player Two Wins!'
+        playerTwoScore ++
+        playerTwoNewScore.textContent = playerTwoScore
     } else if (turnNum === 9 && playerOneWins != true) {
         resultBoard.textContent = 'You both lose!! Tee Hee'
+        resultBoard.style.color = 'salmon'
     }
 }
 

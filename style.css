@@ -1,20 +1,36 @@
 body {
+    background-color: black;
     margin: 0 auto;
     max-width: 960px;
+    color: lightgreen;
+}
+
+header h1 {
+    display: flex;
+    justify-content: center;
 }
 
 main {
     margin: 0 auto;
 }
 
+.result {
+    display: flex;
+    justify-content: center;
+}
+
 .squares {
+    font-family: 'Noto Sans Symbols', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+    margin-top: 100px;
     display: grid;
     grid-template-columns: 100px 100px 100px;
     justify-content: center; 
 }
 
 .tile-one {
-    border: 1px solid black;
+    border: 3px solid cyan;
     width: 100px;
     height: 100px;
     display:flex;
@@ -23,7 +39,7 @@ main {
 }
 
 .tile-two {
-    border: 1px solid black;
+    border: 3px solid cyan;
     width: 100px;
     height: 100px;
     display:flex;
@@ -32,7 +48,7 @@ main {
 }
 
 .tile-three {
-    border: 1px solid black;
+    border: 3px solid cyan;
     width: 100px;
     height: 100px;
     display:flex;
@@ -41,7 +57,7 @@ main {
 }
 
 .tile-four {
-    border: 1px solid black;
+    border: 3px solid cyan;
     width: 100px;
     height: 100px;
     display:flex;
@@ -50,7 +66,7 @@ main {
 }
 
 .tile-five {
-    border: 1px solid black;
+    border: 3px solid cyan;
     width: 100px;
     height: 100px;
     display:flex;
@@ -59,7 +75,7 @@ main {
 }
 
 .tile-six {
-    border: 1px solid black;
+    border: 3px solid cyan;
     width: 100px;
     height: 100px;
     display:flex;
@@ -68,7 +84,7 @@ main {
 }
 
 .tile-seven {
-    border: 1px solid black;
+    border: 3px solid cyan;
     width: 100px;
     height: 100px;
     display:flex;
@@ -77,7 +93,7 @@ main {
 }
 
 .tile-eight {
-    border: 1px solid black;
+    border: 3px solid cyan;
     width: 100px;
     height: 100px;
     display:flex;
@@ -86,7 +102,7 @@ main {
 }
 
 .tile-nine {
-    border: 1px solid black;
+    border: 3px solid cyan;
     width: 100px;
     height: 100px;
     display:flex;
@@ -94,3 +110,7 @@ main {
     align-items: center;
 }
 
+.scores {
+    margin-top: 130px;
+    text-align: center;
+}
