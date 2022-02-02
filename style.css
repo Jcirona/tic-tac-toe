@@ -13,11 +13,84 @@ main {
     justify-content: center; 
 }
 
-.tile {
+.tile-one {
     border: 1px solid black;
-    height: 100px;
     width: 100px;
-    display: flex;
+    height: 100px;
+    display:flex;
     justify-content: center;
     align-items: center;
 }
+
+.tile-two {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile-three {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile-four {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile-five {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile-six {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile-seven {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile-eight {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile-nine {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
