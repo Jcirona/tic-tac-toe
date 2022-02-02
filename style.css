@@ -13,56 +13,11 @@ main {
     justify-content: center; 
 }
 
-.square-one {
+.tile {
     border: 1px solid black;
-    width: 100px;
     height: 100px;
-}
-
-.square-two {
-    border: 1px solid black;
     width: 100px;
-    height: 100px;
-}
-
-.square-three {
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
-}
-
-.square-four {
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
-}
-
-.square-five {
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
-}
-
-.square-six {
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
-}
-
-.square-seven {
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
-}
-
-.square-eight {
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
-}
-
-.square-nine {
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
