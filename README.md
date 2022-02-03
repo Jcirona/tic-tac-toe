@@ -4,7 +4,7 @@ Tic tac toe is an ultra competitive totally balanced game where whoever goes fir
 
 ## talk about approach to planning
 
-I did the things..
+My approach to my plan 
 
 ## Cool tech used to add extra features
 stock photos
@@ -12,13 +12,17 @@ custom fonts
 added sounds to webpage
 
 ## lesssons you learnt
-important of planning
+importance of planning
 time management 
+be prepared to overestimate the difficulty of some problems and underestimate others
+
 
 ## Update this frequently as you learn new things
 
+I didn't think I'd be able to create a functional game with all the game logic contained within a single function
+
 ## future features you want to add down the line
-scoreboard
+scoreboard -> implemented this feature
 more buttons
 different player markers
 inputs to enter player name
