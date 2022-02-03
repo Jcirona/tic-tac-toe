@@ -10,6 +10,7 @@ var drawAudio = new Audio('./sounds/Players-Lose.mp3')
 var resetAudio = new Audio('./sounds/Reset-Scores.mp3')
 
 var gameVolume = document.createElement('audio')
+console.log(gameVolume.volume)
 gameVolume.volume = 0.75
 
 var p1Audio = new Audio('./sounds/PlayerOne-Select.mp3')
