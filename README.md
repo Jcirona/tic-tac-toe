@@ -7,9 +7,8 @@ Tic tac toe is an ultra competitive totally balanced game where whoever goes fir
 My approach to my plan 
 
 ## Cool tech used to add extra features
-stock photos
-custom fonts
-added sounds to webpage
+
+added sounds to webpage -> added custom made sound effects for clicks
 
 ## lesssons you learnt
 importance of planning
@@ -18,7 +17,7 @@ be prepared to overestimate the difficulty of some problems and underestimate ot
 
 
 ## Update this frequently as you learn new things
-
+Learning how to implement sound into JS
 I didn't think I'd be able to create a functional game with all the game logic contained within a single function
 
 ## future features you want to add down the line
