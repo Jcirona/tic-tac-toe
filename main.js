@@ -5,7 +5,6 @@ var turnNum = 0
 var playerOneScore = 0
 var playerTwoScore = 0
 
-var allTiles = document.querySelectorAll('#tiles')
 var tileOne = document.querySelector('.tile-one')
 var tileTwo = document.querySelector('.tile-two')
 var tileThree = document.querySelector('.tile-three')
@@ -16,6 +15,8 @@ var tileSeven = document.querySelector('.tile-seven')
 var tileEight = document.querySelector('.tile-eight')
 var tileNine = document.querySelector('.tile-nine')
 
+var newGame = document.querySelector('.new-game-btn')
+var clearScores = document.querySelector('.clear-scores-btn')
 var resultBoard = document.querySelector('.result')
 var playerOneSelect = document.querySelector('.tile')
 var selectedSquare = document.querySelector('.squares')
@@ -33,6 +34,8 @@ function playerOneClick(event) {
         if (boxClicked.textContent != 'O' && playerOneTurn === true) {
             boxClicked.textContent = 'X'
             boxClicked.style.color = 'yellow'
+            boxClicked.style.animationName = 'rainbowSquareX'
+            boxClicked.style.animationDuration = '0.8s'
             turnNum++
             
             //One dense nest for player X
@@ -76,7 +79,9 @@ function playerOneClick(event) {
          // Player O's seriously large nest                               
         }else if(boxClicked.textContent != 'X' && playerOneTurn === false) {
             boxClicked.textContent = 'O'
-            boxClicked.style.color = 'orange'   
+            boxClicked.style.color = 'orange'
+            boxClicked.style.animationName = 'rainbowSquareX'
+            boxClicked.style.animationDuration = '0.8s'   
             turnNum ++
             
             if (tileOne.textContent === 'O' && tileTwo.textContent === 'O' && tileThree.textContent === 'O'){
@@ -120,17 +125,54 @@ function playerOneClick(event) {
         resultBoard.textContent = 'Player One Wins!'
         playerOneScore ++
         playerOneNewScore.textContent = playerOneScore
+        selectedSquare.removeEventListener('click', playerOneClick)
     } else if (playerTwoWins === true) {
         resultBoard.textContent = 'Player Two Wins!'
         playerTwoScore ++
         playerTwoNewScore.textContent = playerTwoScore
+        selectedSquare.removeEventListener('click', playerOneClick)
     } else if (turnNum === 9 && playerOneWins != true) {
         resultBoard.textContent = 'You both lose!! Tee Hee'
         resultBoard.style.color = 'salmon'
+        selectedSquare.removeEventListener('click', playerOneClick)
     }
 }
 
 selectedSquare.addEventListener('click', playerOneClick)
 
 
+function clearBoard () {
+    tileOne.textContent = ''
+    tileTwo.textContent = ''
+    tileThree.textContent = ''
+    tileFour.textContent = ''
+    tileFive.textContent = ''
+    tileSix.textContent = ''
+    tileSeven.textContent = ''
+    tileEight.textContent = ''
+    tileNine.textContent = ''
+    playerOneWins = null
+    playerTwoWins = null
+    resultBoard.textContent = ''
+    turnNum = 0
+    selectedSquare.addEventListener('click', playerOneClick)
+    playerOneTurn = true
+    selectedSquare.classList.remove('squares-animation')
+    setTimeout( function() {
+        selectedSquare.classList.add('squares-animation')
+    }, 10)
+    
+    
+}
 
+newGame.addEventListener('click', clearBoard)
+
+
+function clearScoreboard () {
+    playerOneScore = 0
+    playerTwoScore = 0
+    playerOneNewScore.textContent = '0'
+    playerTwoNewScore.textContent = '0'
+}
+
+clearScores.addEventListener('click', clearScoreboard)
