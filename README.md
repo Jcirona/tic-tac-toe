@@ -24,7 +24,6 @@ in the game.
 ## New things I learnt
 - Learning how to implement sound into JS.
 - Basic animations in CSS.
-- How
 
 
 
