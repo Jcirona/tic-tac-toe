@@ -5,16 +5,16 @@ var turnNum = 0
 var playerOneScore = 0
 var playerTwoScore = 0
 
-var resetBoard = new Audio('/Users/jeremey/sei/project1/sounds/Clear-Board.mp3')
-var drawAudio = new Audio('/Users/jeremey/sei/project1/sounds/Players-Lose.mp3')
-var resetAudio = new Audio('/Users/jeremey/sei/project1/sounds/Reset-Scores.mp3')
+var resetBoard = new Audio('./sounds/Clear-Board.mp3')
+var drawAudio = new Audio('./sounds/Players-Lose.mp3')
+var resetAudio = new Audio('./sounds/Reset-Scores.mp3')
 
 
-var p1Audio = new Audio('/Users/jeremey/sei/project1/sounds/PlayerOne-Select.mp3')
-var p1WinAudio = new Audio('/Users/jeremey/sei/project1/sounds/PlayerOne-Wins.mp3')
+var p1Audio = new Audio('./sounds/PlayerOne-Select.mp3')
+var p1WinAudio = new Audio('./sounds/PlayerOne-Wins.mp3')
 
-var p2Audio = new Audio('/Users/jeremey/sei/project1/sounds/PlayerTwo-Select.mp3')
-var p2WinAudio = new Audio('/Users/jeremey/sei/project1/sounds/PlayerTwo-Wins.mp3')
+var p2Audio = new Audio('./sounds/PlayerTwo-Select.mp3')
+var p2WinAudio = new Audio('./sounds/PlayerTwo-Wins.mp3')
 
 
 
