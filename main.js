@@ -129,18 +129,24 @@ function playerOneClick(event) {
         }
     }
     if (playerOneWins === true) {
+        var p1WinAudio = new Audio('/Users/jeremey/sei/project1/sounds/PlayerOne-Wins.mp3')
+        p1WinAudio.play()
         resultBoard.textContent = 'Player One Wins!'
         resultBoard.style.color = 'yellow'
         playerOneScore ++
         playerOneNewScore.textContent = playerOneScore
         selectedSquare.removeEventListener('click', playerOneClick)
     } else if (playerTwoWins === true) {
+        var p2WinAudio = new Audio('/Users/jeremey/sei/project1/sounds/PlayerTwo-Wins.mp3')
+        p2WinAudio.play()
         resultBoard.textContent = 'Player Two Wins!'
         resultBoard.style.color = 'orange'
         playerTwoScore ++
         playerTwoNewScore.textContent = playerTwoScore
         selectedSquare.removeEventListener('click', playerOneClick)
     } else if (turnNum === 9 && playerOneWins != true) {
+        var drawAudio = new Audio('/Users/jeremey/sei/project1/sounds/Players-Lose.mp3')
+        drawAudio.play()
         resultBoard.textContent = 'You both lose!! Tee Hee'
         resultBoard.style.color = 'salmon'
         selectedSquare.removeEventListener('click', playerOneClick)
@@ -151,6 +157,8 @@ selectedSquare.addEventListener('click', playerOneClick)
 
 
 function clearBoard () {
+    var resetBoard = new Audio('/Users/jeremey/sei/project1/sounds/Clear-Board.mp3')
+    resetBoard.play()
     tileOne.textContent = ''
     tileTwo.textContent = ''
     tileThree.textContent = ''
@@ -204,6 +212,8 @@ newGame.addEventListener('click', clearBoard)
 
 
 function clearScoreboard () {
+    var resetAudio = new Audio('/Users/jeremey/sei/project1/sounds/Reset-Scores.mp3')
+    resetAudio.play()
     playerOneScore = 0
     playerTwoScore = 0
     playerOneNewScore.textContent = '0'
