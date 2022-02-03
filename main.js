@@ -5,6 +5,20 @@ var turnNum = 0
 var playerOneScore = 0
 var playerTwoScore = 0
 
+var resetBoard = new Audio('/Users/jeremey/sei/project1/sounds/Clear-Board.mp3')
+var drawAudio = new Audio('/Users/jeremey/sei/project1/sounds/Players-Lose.mp3')
+var resetAudio = new Audio('/Users/jeremey/sei/project1/sounds/Reset-Scores.mp3')
+
+
+var p1Audio = new Audio('/Users/jeremey/sei/project1/sounds/PlayerOne-Select.mp3')
+var p1WinAudio = new Audio('/Users/jeremey/sei/project1/sounds/PlayerOne-Wins.mp3')
+
+var p2Audio = new Audio('/Users/jeremey/sei/project1/sounds/PlayerTwo-Select.mp3')
+var p2WinAudio = new Audio('/Users/jeremey/sei/project1/sounds/PlayerTwo-Wins.mp3')
+
+
+
+
 
 
 
@@ -35,7 +49,6 @@ function playerOneClick(event) {
     var boxClicked = event.target
     if (boxClicked.tagName === 'DIV') {
         if (boxClicked.textContent != 'O' && playerOneTurn === true) {
-            var p1Audio = new Audio('/Users/jeremey/sei/project1/sounds/PlayerOne-Select.mp3')
             p1Audio.play()
             boxClicked.textContent = 'X'
             boxClicked.style.color = 'yellow'
@@ -83,8 +96,7 @@ function playerOneClick(event) {
 
          // Player O's seriously large nest                               
         }else if(boxClicked.textContent != 'X' && playerOneTurn === false) {
-            var p1Audio = new Audio('/Users/jeremey/sei/project1/sounds/PlayerTwo-Select.mp3')
-            p1Audio.play()
+            p2Audio.play()
             boxClicked.textContent = 'O'
             boxClicked.style.color = 'orange'
             boxClicked.style.animationName = 'rainbowSquareX'
@@ -129,7 +141,6 @@ function playerOneClick(event) {
         }
     }
     if (playerOneWins === true) {
-        var p1WinAudio = new Audio('/Users/jeremey/sei/project1/sounds/PlayerOne-Wins.mp3')
         p1WinAudio.play()
         resultBoard.textContent = 'Player One Wins!'
         resultBoard.style.color = 'yellow'
@@ -137,7 +148,7 @@ function playerOneClick(event) {
         playerOneNewScore.textContent = playerOneScore
         selectedSquare.removeEventListener('click', playerOneClick)
     } else if (playerTwoWins === true) {
-        var p2WinAudio = new Audio('/Users/jeremey/sei/project1/sounds/PlayerTwo-Wins.mp3')
+        
         p2WinAudio.play()
         resultBoard.textContent = 'Player Two Wins!'
         resultBoard.style.color = 'orange'
@@ -145,7 +156,6 @@ function playerOneClick(event) {
         playerTwoNewScore.textContent = playerTwoScore
         selectedSquare.removeEventListener('click', playerOneClick)
     } else if (turnNum === 9 && playerOneWins != true) {
-        var drawAudio = new Audio('/Users/jeremey/sei/project1/sounds/Players-Lose.mp3')
         drawAudio.play()
         resultBoard.textContent = 'You both lose!! Tee Hee'
         resultBoard.style.color = 'salmon'
@@ -157,7 +167,6 @@ selectedSquare.addEventListener('click', playerOneClick)
 
 
 function clearBoard () {
-    var resetBoard = new Audio('/Users/jeremey/sei/project1/sounds/Clear-Board.mp3')
     resetBoard.play()
     tileOne.textContent = ''
     tileTwo.textContent = ''
@@ -212,7 +221,6 @@ newGame.addEventListener('click', clearBoard)
 
 
 function clearScoreboard () {
-    var resetAudio = new Audio('/Users/jeremey/sei/project1/sounds/Reset-Scores.mp3')
     resetAudio.play()
     playerOneScore = 0
     playerTwoScore = 0
